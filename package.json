@@ -17,6 +17,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@ant-design/icons": "^4.7.0"
+    "@ant-design/icons-svg": "^4.2.1"
   }
 }
