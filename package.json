@@ -15,5 +15,8 @@
     "name": "Michael Utz",
     "email": "michael@theutz.com"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0"
+  }
 }
