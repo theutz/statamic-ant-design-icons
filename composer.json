@@ -1,0 +1,19 @@
+{
+    "name": "theutz/statamic-ant-design-icons",
+    "autoload": {
+        "psr-4": {
+            "Theutz\\StatamicAntDesignIcons\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Statamic Ant Design Icons",
+            "description": "Statamic Ant Design Icons addon"
+        },
+        "laravel": {
+            "providers": [
+                "Theutz\\StatamicAntDesignIcons\\ServiceProvider"
+            ]
+        }
+    }
+}
