@@ -1,0 +1,19 @@
+{
+  "name": "statamic-ant-design-icons",
+  "version": "0.0.0",
+  "description": "> Statamic Ant Design Icons is a Statamic addon that lets you include Ant Design icons using a tag in Antlers.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "statamic",
+    "addon",
+    "ant design",
+    "icon"
+  ],
+  "author": {
+    "name": "Michael Utz",
+    "email": "michael@theutz.com"
+  },
+  "license": "MIT"
+}
