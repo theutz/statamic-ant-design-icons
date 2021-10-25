@@ -12,7 +12,7 @@ class Tag extends Tags
 
     protected static $aliases = ["adicon"];
 
-    private const ICONS_NPM_DIR = "node_modules/@ant-design/icons-svg/inline-namespaced-svg";
+    private const ICONS_NPM_DIR = "node_modules/@ant-design/icons-svg/inline-svg";
 
     private const ICONS_FALLBACK_DIR = __DIR__ . "/../dist";
 
