@@ -8,13 +8,24 @@ use Illuminate\Support\Facades\File;
 
 class Tag extends Tags
 {
-    protected static $handle = 'antdesignicons';
+    protected static $handle = self::HANDLE;
+
+    public const HANDLE = 'antdesignicons';
+
+    public function __get($name)
+    {
+        if ($name === 'handle') {
+            return $this->handle;
+        }
+
+        return null;
+    }
 
     protected static $aliases = ["anticon"];
 
     private const ICONS_NPM_DIR = "node_modules/@ant-design/icons-svg/inline-svg";
 
-    private const ICONS_FALLBACK_DIR = __DIR__ . "/../dist";
+    public const ICONS_FALLBACK_DIR = __DIR__ . "/../resources/icons";
 
     private const DEFAULT_ICON_TYPE = 'outlined';
 
