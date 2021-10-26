@@ -23,7 +23,7 @@ class Tag extends Tags
 
     protected static $aliases = ["anticon"];
 
-    private const ICONS_NPM_DIR = "node_modules/@ant-design/icons-svg/inline-svg";
+    private const ICONS_NPM_DIR = "node_modules/@ant-design/icons-svg/inline-namespaced-svg";
 
     public const ICONS_FALLBACK_DIR = __DIR__ . "/../resources/icons";
 
