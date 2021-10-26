@@ -8,17 +8,23 @@ use Illuminate\Support\Facades\File;
 
 class Tag extends Tags
 {
-    protected static $handle = 'antdesignicon';
+    protected static $handle = 'antdesignicons';
 
-    protected static $aliases = ["adicon"];
+    protected static $aliases = ["anticon"];
 
     private const ICONS_NPM_DIR = "node_modules/@ant-design/icons-svg/inline-svg";
 
     private const ICONS_FALLBACK_DIR = __DIR__ . "/../dist";
 
+    private const DEFAULT_ICON_TYPE = 'outlined';
+
     public function index()
     {
-        return $this->wildcard($this->params->get('type'));
+        $type = $this->params->get('type', self::DEFAULT_ICON_TYPE);
+        $icon = $this->params->get('icon');
+        $class = $this->params->get('class');
+
+        return $this->output($type, $icon, compact('class'));
     }
 
     public function wildcard($tag)
@@ -26,18 +32,20 @@ class Tag extends Tags
         $separator = ":";
         $icon = $this->params->get('icon');
         $class = $this->params->get('class');
+        $type = $this->params->get('type', self::DEFAULT_ICON_TYPE);
 
         if (Str::contains($tag, $separator)) {
-            [$tag, $icon] = explode($separator, $tag);
+            [$icon, $type] = explode($separator, $tag);
+        } else {
+            $icon = $tag;
         }
 
-        return $this->output($tag, $icon, compact('class'));
+        return $this->output($type, $icon, compact('class'));
     }
 
     protected function output($type, $icon, $attributes = [])
     {
         $file = base_path(self::ICONS_NPM_DIR . "/{$type}/{$icon}.svg");
-        debug($file);
 
         if (!File::exists($file) && !File::exists($file = realpath(self::ICONS_FALLBACK_DIR . "/{$type}/{$icon}.svg"))) {
             return '';
