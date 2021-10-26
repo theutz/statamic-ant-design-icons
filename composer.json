@@ -1,19 +1,23 @@
 {
-    "name": "theutz/statamic-ant-design-icons",
-    "autoload": {
-        "psr-4": {
-            "Theutz\\StatamicAntDesignIcons\\": "src"
-        }
-    },
-    "extra": {
-        "statamic": {
-            "name": "Statamic Ant Design Icons",
-            "description": "Statamic Ant Design Icons addon"
-        },
-        "laravel": {
-            "providers": [
-                "Theutz\\StatamicAntDesignIcons\\ServiceProvider"
-            ]
-        }
+  "name": "theutz/statamic-ant-design-icons",
+  "description": "An addon for Statamic that let's you use Ant Design icons as inline SVGs.",
+  "autoload": {
+    "psr-4": {
+      "Theutz\\StatamicAntDesignIcons\\": "src"
     }
+  },
+  "require": {
+    "php": ">=7.4"
+  },
+  "extra": {
+    "statamic": {
+      "name": "Statamic Ant Design Icons",
+      "description": "Statamic Ant Design Icons addon"
+    },
+    "laravel": {
+      "providers": [
+        "Theutz\\StatamicAntDesignIcons\\ServiceProvider"
+      ]
+    }
+  }
 }
