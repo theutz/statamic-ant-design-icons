@@ -9,6 +9,7 @@
   "require": {
     "php": ">=7.4"
   },
+  "license": "MIT",
   "extra": {
     "statamic": {
       "name": "Statamic Ant Design Icons",
